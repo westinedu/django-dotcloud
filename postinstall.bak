@@ -1,0 +1,6 @@
+#!/bin/sh
+python baseapp/manage.py syncdb --all --noinput
+python baseapp/manage.py migrate --fake
+python mkadmin.py
+mkdir -p /home/dotcloud/data/media /home/dotcloud/data/static
+python baseapp/manage.py collectstatic --noinput
