@@ -1,0 +1,6 @@
+#!/bin/sh
+python mycms/manage.py syncdb --all --noinput
+python mycms/manage.py migrate --fake
+python mkadmin.py
+mkdir -p /home/dotcloud/data/media /home/dotcloud/data/static
+python mycms/manage.py collectstatic --noinput
