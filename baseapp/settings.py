@@ -33,12 +33,12 @@ DEFAULT_LANGUAGE = 0
 
 DATABASES = {
   'default': {
-      'ENGINE': 'django.db.backends.sqlite3',
-      'NAME': '/home/dotcloud/ramen.db',
-      'USER': '',
-      'PASSWORD': '',
-      'HOST': '',
-      'PORT': '',
+      'ENGINE': 'django.db.backends.postgresql_psycopg2',
+      'NAME': 'ramen',
+      'USER': 'root',
+      'PASSWORD': 'rn0JX2fkZH1PukaKTJTA',
+      'HOST': 'djangodotcloud-westine.dotcloud.com',
+      'PORT': '34159',
   }
 }
 # Local time zone for this installation. Choices can be found here:

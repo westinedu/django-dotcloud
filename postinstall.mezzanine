@@ -1,0 +1,6 @@
+#!/bin/sh
+python mezzanine/manage.py syncdb --all --noinput
+python mezzanine/manage.py migrate --fake
+python mkadmin.py
+mkdir -p /home/dotcloud/data/media /home/dotcloud/data/static
+python mezzanine/manage.py collectstatic --noinput
